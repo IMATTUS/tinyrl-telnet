@@ -5,10 +5,10 @@ Forked from: https://github.com/philipc/tinyrl
 Twicked tinyrl a bit to use it over telnet.
 
 You will find 2 examples, both uses tinyrl to implement a Command Line Interpreter (CLI):
-one on a local terminal (cli_prompt.c)
-the other over telnet (cli_telnet.c)
+	* one on a local terminal (cli_prompt.c)
+	* the other over telnet (cli_telnet.c)
 
 Hope you find it as useful as it is to me.
 
-Is there something wrong with the code? The license is not ok? 
+Is there something wrong with the code? Is the license not ok? 
 Just let me know and I will look into it. 
