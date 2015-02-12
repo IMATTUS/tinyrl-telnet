@@ -1,16 +1,14 @@
-tinyrl "Tiny Readline Library"
-
 This library provides a simple replacement of the "readline" functionality.
-
-The readline interface and implementation has some fundamental flaws when
-it comes to try and run it within a single memory space envrioment. e.g. vxWorks
-- The use of global variables prevents multiple sessions from co-existing.
-- The comprehensiveness of the library makes it large, and it contains 
-  more features than are needed in an embedded system.
-- It relies on other (large) libraries which are not typically available on an
-  embedded system e.g. termcap.
 
 Forked from: https://github.com/philipc/tinyrl
 
+Twicked tinyrl a bit to use it over telnet.
 
+You will find 2 examples, both uses tinyrl to implement a Command Line Interpreter (CLI):
+one on a local terminal (cli_prompt.c)
+the other over telnet (cli_telnet.c)
 
+Hope you find it as useful as it is to me.
+
+Is there something wrong with the code? The license is not ok? 
+Just let me know and I will look into it. 
