@@ -1,6 +1,4 @@
-/**
-\defgroup tinyrl "Tiny Readline Library"
-@{
+tinyrl "Tiny Readline Library"
 
 This library provides a simple replacement of the "readline" functionality.
 
@@ -12,5 +10,7 @@ it comes to try and run it within a single memory space envrioment. e.g. vxWorks
 - It relies on other (large) libraries which are not typically available on an
   embedded system e.g. termcap.
 
-@}
-*/
+Forked from: https://github.com/philipc/tinyrl
+
+
+
