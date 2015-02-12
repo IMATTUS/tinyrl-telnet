@@ -1,11 +1,9 @@
 /**
- * @file cli.c
- * @author zampar
- * @date Jun 18, 2014
+ * @file cli_prompt.c
+ * @author ibrahim
+ * @date Dec 03, 2014
  * @brief User CLI (Command line interface).
  * @brief Also know as user prompt
- *
- * @see http://www.writesys.com.br
  */
 
 #include "cli_prompt.h"
@@ -360,11 +358,11 @@ static void cli_command_quit(char *arg, tinyrl_t * this)
 
 static void cli_command_1(char *arg, tinyrl_t * this)
 {
-
+	tinyrl_printf(this, "You typed command 1");
 	return;
 }
 static void cli_command_2(char *arg, tinyrl_t * this)
 {
-
+	tinyrl_printf(this, "command 2!");
 	return;
 }

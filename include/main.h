@@ -36,10 +36,7 @@ int cli_get_call_state();
 
 void _cli_set_machine_state(int state);
 
-void cli_print_usage(char *prg);
-void cli_sigterm(int signo);
 void cli_quit_application(void);
 
-char * cli_get_app_build_date();
 
 #endif /* MAIN_H_ */

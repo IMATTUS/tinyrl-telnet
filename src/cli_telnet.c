@@ -3,9 +3,6 @@
  * @author ibrahim
  * @date Dec 03, 2014
  * @brief User CLI (Command line interface) over telnet
- * @brief Also know as user telnet prompt
- *
- * @see http://www.writesys.com.br
  */
 
 #include "cli_telnet.h"
@@ -490,11 +487,11 @@ static void cli_telnet_command_quit(tinyrl_t * this, char *arg)
 
 static void cli_command_1(tinyrl_t * this, char *arg)
 {
-
+	tinyrl_printf(this, "You typed command 1");
 	return;
 }
 static void cli_command_2(tinyrl_t * this, char *arg)
 {
-
+	tinyrl_printf(this, "command 2!");
 	return;
 }

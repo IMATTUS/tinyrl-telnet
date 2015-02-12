@@ -1,8 +1,8 @@
 /**
- * @file cli.c
+ * @file main.c
  * @author ibrahim
- * @date Jan 10, 2015
- * @brief Initiates CLIs over telnet, tcp/ip and tty
+ * @date Dec 03, 2015
+ * @brief Initiates CLIs over telnet and tty
  */
 
 #include "main.h"
@@ -21,25 +21,6 @@ int main_app_state_next;
  */
 int main(int argc, char **argv)
 {
-	int opt;
-	while ((opt = getopt(argc, argv, "h?")) != -1)
-	{
-		switch (opt)
-		{
-
-		case 'h':
-		case '?':
-			cli_print_usage(basename(argv[0]));
-			exit(EXIT_SUCCESS);
-			break;
-
-		default:
-			fprintf(stderr, "Unknown option %c\n", opt);
-			exit(EXIT_FAILURE);
-			break;
-		}
-	}
-
 	// Initial state after init app.
 	main_app_state = START_APP;
 	main_app_state_next = NO_CHANGE_STATE;
@@ -114,31 +95,12 @@ int main(int argc, char **argv)
 }
 
 /**
- * @brief Set a new state machine to be executed on next IDDLE event
+ * @brief Set a new state machine to be executed on next IDLE event
  * @param state New state to be set
  */
 void _cli_set_machine_state(int state)
 {
 	main_app_state_next = state;
-}
-
-/**
- * @brief Print usage options of program to use on command line
- * @param prg Program name
- */
-void cli_print_usage(char *prg)
-{
-	fprintf(stderr, "\nUsage: %s\n", prg);
-	fprintf(stderr, "\ncli, compile date: %s - %s\n", __DATE__, __TIME__);
-}
-
-/**
- * @brief Function that process all SIG signals. To avoid that Ctrl+C, Ctrl+Z... close the app
- * @param signo Signal number received
- */
-void cli_sigterm(int signo)
-{
-	fprintf(stderr, "Received kill signal, code: %u.", signo);
 }
 
 /**
